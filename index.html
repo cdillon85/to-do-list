@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <link href="/style.css" rel="stylesheet" />
-    <title>Christine's Awesome To Do List</title>
+    <title>List-Maker</title>
   </head>
  
   <body>
-  <h1 id="title">To Dos</h1>
-    <div id="app">
+  <div id="nav">
+    <h1 id="title">List Maker</h1>
+    <h2 class="header-btn">My Lists</h2>
+    <h2 class="header-btn">New List</h2>
+    <h2 class="header-btn">About</h2>
+  </div>
+  <div ng-view></div>
+  <div id="footer">
+  </div>
+
+    <!--grunt browser sync script -->
     <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+    document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));//]]></script>
+
+    <!--3rd party libraries-->
+    <script src="/node_modules/angular/angular.js"></script>
   </body>
 </html>
